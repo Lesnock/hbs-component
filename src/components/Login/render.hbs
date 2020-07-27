@@ -1,0 +1,31 @@
+<script>
+    function onRender(state) {
+        setState({
+            name: 'Gabriela',
+            title: 'Um',
+            abc: (event) => {
+                console.log('abc')
+            }
+        })
+
+        document.addEventListener('click', function () {
+            setState({
+                name: 'Caio'
+            })
+        })
+    }
+
+    function onUpdate(state, oldState) {
+
+    }
+</script>
+
+<render>
+    <h1 id="title">Welcome, {{ name }}</h1>
+
+    {{ title }}
+
+    <button onclick="{{ abc }}">
+        Teste
+    </button>
+</render>
